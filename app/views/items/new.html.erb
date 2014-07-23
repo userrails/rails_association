@@ -1,0 +1,9 @@
+<%= form_for @item, :url => items_path, :method => "GET" do |f| %>
+<% @categories.each do |category| %>
+  <%= check_box_tag "item[category_ids][]", category.id, @item.categories.include?(category.id) %> <%= category.name %>
+<% end %>
+<br/>
+  Name: <%= f.text_field :name %>
+  Description: <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>

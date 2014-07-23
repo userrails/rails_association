@@ -1,0 +1,33 @@
+<table border="1">
+  <tr>
+    <th>Content</th>
+    <th>Commentable</th>
+    <th>Commentable type</th>
+  </tr>
+  
+  <% for comment in @comments %>
+  <tr>
+    <td>
+      <%= comment.content %>
+    </td>
+    <td>
+      <%= comment.commentable_id %>
+    </td>
+    <td>
+      <%= comment.commentable_type %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<h2>New comment</h2>
+
+<%= form_for [@commentable, Comment.new] do |f|%>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>

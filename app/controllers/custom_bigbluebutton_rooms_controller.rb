@@ -1,0 +1,2 @@
+class CustomBigbluebuttonRoomsController < Bigbluebutton::ServersController
+end

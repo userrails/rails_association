@@ -1,0 +1,2 @@
+class CustomBigbluebuttonRecordingsController < Bigbluebutton::ServersController
+end

@@ -1,0 +1,5 @@
+<%= params.inspect %>
+
+<% @categories.each do |category| %>
+  <%= check_box_tag "item[category_ids][]", category.id, @item.categories.include?(category.id) %> <%= category.name %>
+<% end %>

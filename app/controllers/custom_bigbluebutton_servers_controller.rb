@@ -1,0 +1,2 @@
+class CustomBigbluebuttonServersController < Bigbluebutton::ServersController
+end
